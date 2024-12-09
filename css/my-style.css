@@ -1,0 +1,41 @@
+#page-body{
+    min-height: 100vh;
+    font-family: "Roboto Light", "Georgia Pro Light", "Gill Sans Nova Light" ;
+}
+#login-body, #signup-body, #home-body{
+    min-height: inherit !important;
+}
+#home-body{
+    margin-top: 10%;
+}
+
+#account-info{
+    margin-top: 10%;
+}
+.form-control:focus {
+    border-color: limegreen;
+    box-shadow: inset 0 0 1px limegreen;
+}
+#logoutBtn, #loginBtn{
+    color: darkgray !important;
+    background-color: inherit !important;
+}
+#logoutBtn:hover, #loginBtn:hover{
+    color: lightgray !important;
+}
+#inline{
+    display: inline;
+}
+.disabled{
+    cursor: not-allowed !important;
+}
+.disabled:focus{
+    pointer-events: none;
+}
+.card:hover{
+    border: 2px solid gray !important;
+}
+#home-title{
+    border-bottom: 2px solid limegreen !important;
+    margin-bottom: 2rem;
+}

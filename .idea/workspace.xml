@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ec3593a3-f313-43ed-8ecc-f6b9080f8671" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="PhpTemplates">
+    <option name="NEW_PHP_FILE_LAST_EXTENSION" value="phtml" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectId" id="1kpyBYsGfLLVnbzi6btm6MFM5Th" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Emmanuel Ozioma\PhpstormProjects\assignment1\images" />
+      <recent name="C:\Users\Emmanuel Ozioma\PhpstormProjects\assignment1\css" />
+      <recent name="C:\Users\Emmanuel Ozioma\PhpstormProjects\assignment1" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ec3593a3-f313-43ed-8ecc-f6b9080f8671" name="Default Changelist" comment="" />
+      <created>1606411692598</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606411692598</updated>
+      <workItem from="1606411693680" duration="16024000" />
+      <workItem from="1606528089108" duration="22362000" />
+      <workItem from="1606610849319" duration="4981000" />
+      <workItem from="1606758106243" duration="956000" />
+      <workItem from="1607084146488" duration="11574000" />
+      <workItem from="1607610105083" duration="9361000" />
+      <workItem from="1607756124422" duration="9347000" />
+      <workItem from="1607940917117" duration="33782000" />
+      <workItem from="1608320960594" duration="1835000" />
+      <workItem from="1608488380873" duration="31515000" />
+      <workItem from="1608635368709" duration="200254000" />
+      <workItem from="1608980581554" duration="127000" />
+      <workItem from="1608981529697" duration="15020000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="252" y="144" key="#PHP" timestamp="1606412200635">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="252" y="144" key="#PHP/0.0.1536.864@0.0.1536.864" timestamp="1606412200635" />
+    <state x="0" y="137" width="1089" height="727" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608524232096">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="0" y="137" width="1089" height="727" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1608524232096" />
+    <state x="574" y="148" key="#com.intellij.ide.util.MemberChooser" timestamp="1608920025442">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="574" y="148" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1608920025442" />
+    <state x="322" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607953935198">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="322" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864@0.0.1536.864" timestamp="1607953935198" />
+    <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1608510452438">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1608510452438" />
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1606443808652">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1606443808652" />
+    <state x="0" y="0" width="822" height="864" key="FileDocumentManager.FileCacheConflict" timestamp="1608526541047">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="0" y="0" width="822" height="864" key="FileDocumentManager.FileCacheConflict/0.0.1536.864@0.0.1536.864" timestamp="1608526541047" />
+    <state width="1493" height="219" key="GridCell.Tab.0.bottom" timestamp="1608988140307">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="219" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1608988140307" />
+    <state width="1493" height="219" key="GridCell.Tab.0.center" timestamp="1608988140306">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="219" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1608988140306" />
+    <state width="1493" height="219" key="GridCell.Tab.0.left" timestamp="1608988140306">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="219" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1608988140306" />
+    <state width="1493" height="219" key="GridCell.Tab.0.right" timestamp="1608988140307">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="219" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1608988140307" />
+    <state x="501" y="155" key="NewPhpClassDialog" timestamp="1608944719634">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="501" y="155" key="NewPhpClassDialog/0.0.1536.864@0.0.1536.864" timestamp="1608944719634" />
+    <state x="933" y="398" width="328" height="164" key="NewPhpFileDialog" timestamp="1608956636962">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="933" y="398" width="328" height="164" key="NewPhpFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1608956636962" />
+    <state x="634" y="170" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1606530771302">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="634" y="170" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.864@0.0.1536.864" timestamp="1606530771302" />
+    <state x="425" y="197" width="672" height="677" key="run.anything.popup" timestamp="1608976935725">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="425" y="197" width="672" height="677" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1608976935725" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1608718944184">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1608718944184" />
+  </component>
+</project>

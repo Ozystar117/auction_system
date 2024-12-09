@@ -1,0 +1,25 @@
+<?php require_once ("Views/template/header.phtml") ?>
+    <div class="row text-center">
+        <div class="col-sm-12">
+            <h1>Auctions</h1>
+        </div>
+    </div>
+    <div class="row">
+        <?php
+        // Display the details of all auctions
+        foreach ($view->auctionDataset as $auction) {
+            echo '
+                    <div class="col-sm-4 col-lg-3 p-3">
+                      <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">' . $auction->getAuctionName() . '</h5>
+                            <p class="card-text">' . $auction->getAddress() . '</p>
+                            <p class="card-text">' . $auction->getAuctionStartDate() . '</p>
+                            <a href="search.php?auction='.$auction->getAuctionName().'&page=1" class="btn btn-primary btn-block">View Lots</a>
+                        </div>
+                      </div>
+                    </div>';
+        }
+        ?>
+    </div>
+<?php require_once ("Views/template/footer.phtml")?>

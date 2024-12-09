@@ -1,0 +1,26 @@
+<?php require_once ("Views/template/header.phtml") ?>
+<!--if the user is logged in show a welcome message displaying the user's first name-->
+<?php if(isset($_SESSION["userID"])) : ?>
+<div class="row">
+    <div class="col-sm-12">
+        <h4 id="inline">Hello, </h4>
+        <h4 class="text-success" id="inline"><?php echo $_SESSION["firstName"];?></h4>
+    </div>
+</div>
+<?php endif;?>
+<div class="row text-center" id="home-body">
+    <div class="col-sm-12 col-md-2 col-lg-3"></div>
+    <div class="col-sm-12 col-md-8 col-lg-6">
+        <h1 class="border-bottom" id="home-title">Ozioma PLC</h1><br><br>
+        <form method="post" action="search.php?page=1">
+            <div class="form-group">
+                <input class="form-control mr-sm-2" name="keyWord" type="search" placeholder="Search Lots" aria-label="Search">
+            </div>
+            <div class="form-group">
+                <input class="btn btn-outline-success my-2 my-sm-0" name="searchSubmitBtn" type="submit" value="Search">
+            </div>
+        </form>
+    </div>
+    <div class="col-sm-12 col-md-2 col-lg-3"></div>
+</div>
+<?php require_once ("Views/template/footer.phtml")?>

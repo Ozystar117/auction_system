@@ -1,0 +1,63 @@
+<?php require_once ("Views/template/header.phtml"); ?>
+<div class="row">
+    <div class="col-12 p-3 mx-auto text-center">
+        <p class="display-4"> <?php echo $view->lot->getItemTitle()?></p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 p-3 mx-auto">
+        <div class="card">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <?php for($i=1; $i < count($view->lot->getImageArr()); $i++) : ?>
+                        <li data-target="#demo" data-slide-to=<?php echo $i?>></li>
+                    <?php endfor;?>
+                </ul>
+
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+<!--                                <img class="card-img-top" src="images/car--><?php //echo $lot->getItemLotID()?><!---1.jpg" alt="img1">-->
+                        <img class="card-img-top" src="<?php echo $view->lot->getImage(0)?>" alt="img1">
+                    </div>
+                    <?php for($i=1; $i < count($view->lot->getImageArr()); $i++) : ?>
+                        <div class="carousel-item">
+                            <img class="card-img-top" src="<?php echo $view->lot->getImage($i)?>" alt="<?php echo "img" . $i?>">
+                        </div>
+                    <?php endfor; ?>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+
+            </div>
+            <div class="card-body text-center">
+                <h3 class="card-title">Item Title: <?php echo $view->lot->getItemTitle()?></h3>
+                <h4 class="card-text">Description: <?php echo $view->lot->getItemDescription()?></h4>
+                <h4 class="card-text">Lot ID: <?php echo $view->lot->getItemLotID()?></h4>
+                <h4 class="card-text text-info">Highest Bid: $<?php if(isset($view->highestBid)){echo $view->highestBid;}else{echo "None yet";}?></h4>
+                <form method="post" action="bids.php?lotID=<?php echo $view->lot->getItemLotID()?>">
+                    <input type="number" name="bidAmount" placeholder="Amount">
+<!--                    If the user is logged in allow the user to bid else disable the button and display a message telling the user to login-->
+                    <?php if(isset($_SESSION["userID"])) : ?>
+                        <input type="submit" name="bidSubmitBtn" class="btn btn-primary" value="Bid Item">
+                    <?php else : ?>
+                        <input type="submit" name="bidSubmitBtn" class="disabled btn btn-primary" value="Bid Item">
+                        <p class="text-danger">Please login to bid</p>
+                    <?php endif;?>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2"></div>
+</div>;
+<?php require_once ("Views/template/footer.phtml"); ?>

@@ -1,0 +1,32 @@
+<?php require_once ("Views/template/header.phtml");?>
+    <div class="row text-center">
+        <div class="col-12">
+            <h1 class="border-bottom">Account Info</h1>
+        </div>
+    </div>
+    <div class="row text-center" id="account-body">
+        <div class="col-12">
+            <div class="border-bottom" id="account-info">
+                <h1>Username</h1>
+                <h4 class="text-info"><?php echo $view->user->getUserName()?></h4>
+            </div>
+            <div class="border-bottom" id="account-info">
+                <h1>First Name</h1>
+                <h3 class="text-info"><?php echo $view->user->getFirstName()?></h3>
+            </div>
+            <div class="border-bottom" id="account-info">
+                <h1>Last Name</h1>
+                <h3 class="text-info"><?php echo $view->user->getLastName()?></h3>
+            </div>
+            <div class="border-bottom" id="account-info">
+                <h1>Number of bids made</h1>
+                <h3 class="text-info"><?php echo $view->noOfBids?></h3>
+            </div>
+            <?php if(isset($_SESSION['adminUser'])) : ?>
+            <div class="">
+                <h4 class="text-success">You are an admin</h4>
+            </div>
+            <?php endif; ?>
+        </div>
+    </div>
+<?php require_once ("Views/template/footer.phtml");?>

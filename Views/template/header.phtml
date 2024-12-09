@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/my-style.css">
+
+    <title>Assignment1- <?php echo $view->pageTitle; ?></title>
+</head>
+
+<body role="document">
+<nav class="navbar navbar-expand-sm navbar-dark sticky-top shadow-sm bg-dark">
+    <!--Logo-->
+    <a class="navbar-brand <?php if($view->pageTitle == "Home"){echo "active";}?>" href="index.php">Logo</a>
+
+    <!--    Toggler-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavBar">
+        <span class="navbar-toggler-icon primary"></span>
+    </button>
+    <!--Navbar Links-->
+    <div class="collapse navbar-collapse text-center" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link <?php if($view->pageTitle == "Auctions"){echo "active";}?>"  href = "auctions.php">AUCTIONS</a>
+            </li>
+            <li class="nav-item">
+<!--                DISABLE THE 'YOUR BIDS' OPTION FOR USERS THAT ARE NOT LOGGED IN-->
+                <?php if(isset($_SESSION["userID"])) : ?>
+                    <a class="nav-link <?php if($view->pageTitle == "Your Bids"){echo "active";}?>"  href = "bids.php">YOUR BIDS</a>
+                <?php else : ?>
+                    <a class="nav-link disabled <?php if($view->pageTitle == "Your Bids"){echo "active";}?>"  href = "bids.php" id="disabled">YOUR BIDS</a>
+                <?php endif;?>
+            </li>
+<!--                                                Post Lots -->
+            <?php if(isset($_SESSION['adminUser'])) : ?>
+            <li class="nav-item">
+                <a class="nav-link <?php if($view->pageTitle == "Post Lot"){echo "active";}?>" href = "postlot.php">POST ITEM</a>
+            </li>
+            <?php endif; ?>
+<!--                Show the user's account if the user is logged in  -->
+            <?php if(isset($_SESSION['userID'])) : ?>
+            <li class="nav-item">
+                <a class="nav-link <?php if($view->pageTitle == "Account"){echo "active";}?>"  href = "account.php">ACCOUNT</a>
+            </li>
+            <?php endif;?>
+            <li class="nav-item">
+                <?php if(!isset($_SESSION["userID"])) : ?>
+                    <a  id="loginBtn" href = "login.php?redirect=<?php echo "http://". $_SERVER["HTTP_HOST"] . "/index.php"?>" class="nav-link btn bg-dark my-2 my-sm-0 <?php if($view->pageTitle == "Login"){echo "active";}?>">LOGIN</a>
+                <?php else : ?>
+                    <form method="post" action="login.php?redirect=<?php echo "http://". $_SERVER["HTTP_HOST"] . "/index.php"?>">
+                        <input type="submit" name="logoutButton" class="btn my-2 my-sm-0" id="logoutBtn" value="LOGOUT">
+                    </form>
+                <?php endif; ?>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class = "container-fluid" id="page-body">

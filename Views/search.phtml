@@ -1,0 +1,52 @@
+<?php require_once ("Views/template/header.phtml") ?>
+
+<div class="row">
+    <div class="col-12 p-3 mx-auto text-center">
+        <h1><?php echo $view->noOfResults;?></h1>
+    </div>
+</div>
+
+
+<div class="row">
+<!--    Display the items to the user    -->
+    <?php foreach ($view->lotDataset as $lot) : ?>
+        <div class="col-sm-6 col-lg-4 p-3">
+            <div class="card">
+<!--                    Card Image -->
+                <img class="card-img-top" src="<?php echo $lot->getImage(0)?>" alt="lotImg">
+<!--                    Card Body -->
+                <div class="card-body text-center">
+                    <h3 class="card-title">Title: <?php echo $lot->getItemTitle();?></h3>
+                    <h4 class="card-text">Description: <?php echo $lot->getItemDescription();?></h4>
+                    <h4 class="card-text">Lot ID: <?php echo $lot->getItemLotID();?></h4>
+                    <a href="<?php echo 'lot.php?lotID='.$lot->getItemLotID();?>" class="btn btn-primary btn-block">View</a>
+                </div>
+            </div>
+        </div>
+    <?php endforeach;?>
+</div>
+<!--Pagination-->
+<div class="row">
+    <div class="col-12">
+<!--        Create a list of links to help the user navigate through the search results-->
+        <ul class="pagination justify-content-center">
+<!--            If the user is at the first page disable the prev button -->
+            <?php if($view->prevPage == 0) : ?>
+                <li class="page-item"><a class="page-link disabled" href="search.php?page=<?php echo $view->prevPage?>&keyWord=<?php echo $view->keyWord;?>">Prev</a></li>
+            <?php else : ?>
+                <li class="page-item"><a class="page-link" href="search.php?page=<?php echo $view->prevPage?>&keyWord=<?php echo $view->keyWord;?>">Prev</a></li>
+            <?php endif;?>
+<!--            Display the pagination links to the user -->
+            <?php for($view->page = 1; $view->page <= $view->noOfPages; $view->page++) : ?>
+                <li class="page-item <?php if($view->page == $_GET['page']){echo "active";}?>"><a class="page-link " href="search.php?page=<?php echo $view->page?>&keyWord=<?php echo $view->keyWord;?>"><?php echo $view->page?></a> </li>
+            <?php endfor;?>
+<!--            If the user is at the last page, disable the next button-->
+            <?php if($view->nextPage > $view->noOfPages) : ?>
+                <li class="page-item"><a class="page-link disabled" href="search.php?page=<?php echo $view->nextPage?>&keyWord=<?php echo $view->keyWord;?>">Next</a></li>
+            <?php else : ?>
+                <li class="page-item"><a class="page-link" href="search.php?page=<?php echo $view->nextPage?>&keyWord=<?php echo $view->keyWord;?>">Next</a></li>
+            <?php endif;?>
+        </ul>
+    </div>
+</div>
+<?php require_once ("Views/template/footer.phtml");?>

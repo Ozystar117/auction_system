@@ -1,0 +1,48 @@
+<?php require_once ("Views/template/header.phtml"); ?>
+<div class="row text-center border-bottom">
+    <div class="col-12">
+        <h1>Post or update an Item</h1>
+    </div>
+</div>
+<div class="row text-center" id="home-body">
+    <div class="col-md-3"></div>
+    <div class="col-sm-12 col-md-6">
+<!--        Form for item upload-->
+        <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="itemTitle">Title</label><br>
+                <input class="form-control text-center" type="text" name="itemTitle" placeholder="Title of the item you want to post" required>
+            </div>
+            <div class="form-group">
+                <label for="itemDescription">Description</label><br>
+                <textarea class="form-control text-center" type="text" name="itemDescription" placeholder="Brief Description of the item" required></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" name="uploadItemSubmitBtn" class="btn btn-outline-success" value="Upload Item">
+            </div>
+<!--            If the item upload was successful, output a message to the user-->
+            <p class="text-success"><?php if(isset($view->successfulItem)){echo $view->successfulItem;}?></p>
+        </form>
+<!--        Form ,for picture upload -->
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>" enctype="multipart/form-data">
+            <div class="form-group mt-5">
+                <label class="col-form-label" for="picLotID">Lot ID</label><br>
+                <input class="form-control text-center" type="number" name="picLotID" placeholder="ID of the lot item you wish to upload a picture for" required>
+            </div>
+            <div class="form-group">
+                <input class="text-center" type="file" name="picFile">
+            </div>
+            <div class="form-group">
+                <input type="submit" name="uploadPicSubmitBtn" class="btn btn-outline-success" value="Upload Picture">
+            </div>
+<!--            if there is a problem with the upload output the related message to the user -->
+            <p class="text-danger"><?php if(isset($view->notAllowed)){echo $view->notAllowed;}?></p>
+<!--            if the image uploaded successfully, output a message to the user-->
+            <p class="text-success"><?php if(isset($view->successful)){echo $view->successful;}?></p>
+        </form>
+
+    </div>
+    <div class="col-md-3"></div>
+</div>
+<?php require_once ("Views/template/footer.phtml"); ?>
+

@@ -1,0 +1,41 @@
+<?php require_once ("Views/template/header.phtml"); ?>
+<div class="row align-items-center" id="signup-body">
+
+        <div class="col-sm-2 col-md-3"></div>
+        <div class="col-sm-8 col-md-6">
+            <h1 class="mb-5 text-center">SIGN UP</h1>
+            <form action="signup.php" method="post" class="text-center">
+                <div class="form-group">
+                    <label for="firstName">First Name*</label>
+                    <input type="text" class="form-control" name="firstName" placeholder="e.g Emmanuel" value="<?php if(isset($_POST['firstName'])){echo $_POST['firstName'];} ?>" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name*</label>
+                    <input type="text" class="form-control" name="lastName" placeholder="e.g Ozioma" value="<?php if(isset($_POST['lastName'])){echo $_POST['lastName'];} ?>" required>
+                </div>
+                <div class="form-group">
+                    <label for="emailAddress">Email Address*</label>
+                    <input type="email" class="form-control" name="emailAddress" placeholder="e.g ozioma@gmail.com" value="<?php if(isset($_POST['emailAddress'])){echo $_POST['emailAddress'];}?>" required>
+                    <p><small class="text-danger"><?php if(isset($view->emailMismatch)){echo $view->emailMismatch;}?></small></p>
+                </div>
+                <div class="form-group">
+                    <label for="confirmEmailAddress">Re-enter Email Address*</label>
+                    <input type="email" class="form-control" name="confirmEmailAddress" placeholder="Re-enter Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Preferred Password*</label>
+                    <input type="password" class="form-control" name="pwd" placeholder="******" required>
+                    <p><small class="text-danger"><?php if(isset($view->pwdMismatch)){echo $view->pwdMismatch;}?></small></p>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPwd">Confirm Password*</label>
+                    <input type="password" class="form-control" name="confirmPwd" placeholder="Re-enter Password" required><br>
+                </div>
+                <div class="form-group" method="post">
+                    <input type="submit" name="signupSubmitBtn" class="btn btn-success form-control" value="Sign Up">
+                </div>
+            </form>
+        </div>
+    <div class="col-sm-2 col-md-3"></div>
+</div>
+<?php require_once ("Views/template/footer.phtml");?>

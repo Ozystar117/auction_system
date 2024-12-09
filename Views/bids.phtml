@@ -1,0 +1,40 @@
+<?php require_once ("Views/template/header.phtml"); ?>
+<div class="row">
+    <div class="col-12 p-3 mx-auto text-center">
+        <p class="display-4"><?php echo $view->noOfBids?></p>
+        <p class="text-danger"><?php if(isset($view->duplicateMessage)){echo $view->duplicateMessage;}?></p>
+    </div>
+</div>
+
+<div class="row">
+<!--    Display all the user's bids-->
+    <?php foreach ($view->bidsDataset as $bid) : ?>
+        <div class="col-sm-12 col-md-6 col-lg-4 p-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title"> <?php echo $bid->getItemTitle()?></h5>
+                    <p class="card-text">Description:  <?php echo $bid->getItemDescription()?></p>
+                    <p class="card-text">Lot ID:  <?php echo $bid->getItemLotID()?></p>
+                    <p class="card-text text-info">Your Bid: $<?php echo $bid->getAmount()?></p>
+
+<!--                    Display if the user is currently winning or losing a bid-->
+                    <?php $bidDataset = new BidsDataset(); if($_SESSION["userID"] == $bidDataset->getHighestBidder($bid->getItemLotID())) : ?>
+                        <p class="card-text text-success">Winning</p>
+                    <?php else : ?>
+                        <p class="card-text text-danger">Losing</p>
+                    <?php endif; ?>
+
+<!--                    Display the current highest bid of the itemLot-->
+                    <p class="card-text text-info">Highest Bid: $<?php echo $bidDataset->getHighestBid($bid->getItemLotID())?></p>
+
+                    <form method="post" action="bids.php?lotID=<?php echo $bid->getItemLotID()?>">
+                        <input type="number" name="editBid" placeholder="Amount">
+                        <input type="submit" name="editBidBtn" value="Edit" class="btn btn-info">
+                    </form>
+                    <a href="<?php echo 'lot.php?lotID='.$bid->getItemLotID();?>" class="btn btn-primary btn-block">View</a>
+                </div>
+            </div>
+        </div>
+    <?php endforeach;?>
+</div>
+<?php require_once ("Views/template/footer.phtml"); ?>
